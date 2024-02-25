@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lobby</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="lobbySection">
+        <button id="createLobby">Create New Lobby</button>
+        <form id="joinLobbyForm">
+            <input type="text" id="lobbyCode" placeholder="Enter Lobby Code">
+            <button type="submit">Join Lobby</button>
+        </form>
+    </div>
+    <div id="lobbyInfo" class="hidden">
+        <p><span id="displayLobbyId"></span></p>
+    </div>
+    <div id="questionSection" class="hidden">
+        <p id="questionText">Question will appear here</p>
+        <div id="voteButtonsContainer">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+    
+    
+
+    <div id="voteResults" class="hidden"></div>
+
+    <div id="errorMessage" class="hidden">Error messages will be shown here.</div>
+
+    <div id="submitQuestionSection" class="hidden">
+        <input type="text" id="customQuestionInput" placeholder="Enter your question here">
+        <button id="sendQuestion">Send</button>
+    </div>
+    
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
